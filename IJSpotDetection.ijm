@@ -35,6 +35,11 @@ for(i=0; i<images.length; i++) {
 		// Processing
 		run("Clear Results", "");
 		run("FeatureJ Laplacian", "compute smoothing="+d2s(LapRad,2));
+		getMinAndMax(min,max);
+		setThreshold(min,-1.5);
+		setOption("BlackBackground", false);
+		run("Convert to Mask");
+		run("Distance Map");
 		run("Find Maxima...", "noise="+d2s(NoiseTol,2)+" output=List light");
 		
 		// Export results
