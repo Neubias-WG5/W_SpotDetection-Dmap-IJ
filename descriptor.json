@@ -1,11 +1,11 @@
 {
-    "name": "2DSpotDetection-ImageJ",
+    "name": "SpotDetection-Dmap-ImageJ",
     "container-image": {
-        "image": "neubiaswg5/w_spotdetection-ij",
+        "image": "neubiaswg5/W_spotdetection-dmap-ij",
         "type": "singularity"
     },
     "schema-version": "cytomine-0.1",
-    "description": "2D spot detection using a LoG filter and the detection of minima.",
+    "description": "Distance map based spot detection ImageJ macro",
     "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE IJ_RADIUS IJ_NOISE",
     "inputs": [
         {
