@@ -75,7 +75,7 @@
             "name": "Noise",
             "description": "Noise tolerance",
             "type": "Number",
-            "default-value": 2.5,
+            "default-value": 0,
             "optional": true
         }
     ]
