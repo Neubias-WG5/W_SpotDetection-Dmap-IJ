@@ -1,7 +1,7 @@
 {
-    "name": "SpotDetection-Dmap-ImageJ",
+    "name": "SpotDetection-Dmap-IJ",
     "container-image": {
-        "image": "neubiaswg5/W_spotdetection-dmap-ij",
+        "image": "neubiaswg5/w_spotdetection-dmap-ij",
         "type": "singularity"
     },
     "schema-version": "cytomine-0.1",
