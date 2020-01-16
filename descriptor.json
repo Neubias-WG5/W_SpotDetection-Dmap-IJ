@@ -6,7 +6,7 @@
     },
     "schema-version": "cytomine-0.1",
     "description": "Distance map based spot detection ImageJ macro",
-    "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE IJ_RADIUS IJ_NOISE",
+    "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE IJ_RAD IJ_THR IJ_NOISETOL",
     "inputs": [
         {
             "id": "cytomine_host",
@@ -59,21 +59,31 @@
             "set-by-server": true
         },
         {
-            "id": "ij_radius",
+            "id": "ij_rad",
             "value-key": "@ID",
             "command-line-flag": "--@id",
-            "name": "Radius",
-            "description": "Radius for Gaussian smoothing",
+            "name": "LoG Radius",
+            "description": "Radius of Laplacian of Gaussian",
             "type": "Number",
             "default-value": 2,
             "optional": true
         },
         {
-            "id": "ij_noise",
+            "id": "ij_thr",
             "value-key": "@ID",
             "command-line-flag": "--@id",
-            "name": "Noise",
-            "description": "Noise tolerance",
+            "name": "LoG threshold",
+            "description": "Intensity threshold applied to LoG filtered image",
+            "type": "Number",
+            "default-value": 2,
+            "optional": true
+        },
+        {
+            "id": "ij_noisetol",
+            "value-key": "@ID",
+            "command-line-flag": "--@id",
+            "name": "Noise tolerance",
+            "description": "Noise tolerance to detect intensity maxima in distance map",
             "type": "Number",
             "default-value": 0,
             "optional": true
