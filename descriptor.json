@@ -75,7 +75,7 @@
             "name": "LoG threshold",
             "description": "Intensity threshold applied to LoG filtered image",
             "type": "Number",
-            "default-value": 2,
+            "default-value": -1.5,
             "optional": true
         },
         {
